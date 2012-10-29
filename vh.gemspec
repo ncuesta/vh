@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["nahuelcuestaluengo@gmail.com"]
   gem.description   = %q{CLI tool for managing Virtual Hosts on a local environment.}
   gem.summary       = %q{Virtual Hosts manager.}
-  gem.homepage      = "https://ncuesta.github.com/vh"
+  gem.homepage      = "http://ncuesta.github.com/vh"
 
   gem.add_development_dependency "rspec"
 
