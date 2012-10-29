@@ -3,11 +3,25 @@
 Virtual Hosts manager for the CLI -- a dead simple script to add new virtual hosts
 that will ease the local development of web apps with Apache.
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'vh'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install vh
+
 ## Usage
 
 Running `vh` is pretty straight-forward:
 
-`vh.rb path hostname`
+    vh path hostname
 
 Where:
 

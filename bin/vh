@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require "vh"
+require "pathname"
+
+# Validate required arguments
+if ARGV.length < 2
+  puts 'Missing arguments.'
+  puts 'Usage:'
+  puts '  vh path hostname'
+  exit 1
+end
+
+path = Pathname.new(ARGV[0]).realpath.to_s
+host = ARGV[1]
+
+Vh.add path, host
