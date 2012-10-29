@@ -1,4 +1,4 @@
-require "base_config"
+require "vh/base_config"
 
 module Vh
   # Apache configuration manager
