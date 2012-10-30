@@ -3,6 +3,14 @@
 Virtual Hosts manager for the CLI -- a dead simple script to add new virtual hosts
 that will ease the local development of web apps with Apache.
 
+**This is currently a WIP so things will not likely work** :)
+
+## Prerequisites
+
+Add this line to your `/etc/apache2/httpd.conf`:
+
+    Include /etc/apache2/extra/httpd-vhosts.conf
+
 ## Installation
 
 Add this line to your application's Gemfile:
