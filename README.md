@@ -7,9 +7,10 @@ that will ease the local development of web apps with Apache.
 
 ## Prerequisites
 
-Add this line to your `/etc/apache2/httpd.conf`:
+No prerequisites besides having a working installation of Apache 2.
 
-    Include /etc/apache2/extra/httpd-vhosts.conf
+For the moment, only default paths are taken into account, but soon the path to the
+different configuration files will be fully customizable.
 
 ## Installation
 
@@ -40,6 +41,8 @@ Where:
 
 ```
 Copyright (c) 2012 José Nahuel Cuesta Luengo
+
+MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
