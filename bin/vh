@@ -5,9 +5,25 @@ require "pathname"
 
 # Validate required arguments
 if ARGV.length < 2
-  puts 'Missing arguments.'
-  puts 'Usage:'
-  puts '  vh path hostname'
+  puts <<-HELP
+You seem to have missed some arguments.
+Here is a simple usage section for you to enjoy:
+
+    #{$0} PATH HOSTNAME
+
+Where:
+    - PATH:     Is a filesystem path (relative or absolute) to the web root.
+    - HOSTNAME: Is the hostname that you'll use to access the web.
+
+For instance, executing:
+
+    #{$0} ./web my.nifty.server
+
+Will create a new web root at ./web that will be accessed
+via http://my.nifty.server/
+
+  HELP
+
   exit 1
 end
 
