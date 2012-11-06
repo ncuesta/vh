@@ -1,3 +1,4 @@
+require "vh/apache_installer"
 require "vh/apache_config"
 require "vh/hosts_config"
 require "vh/apache_handler"
@@ -14,6 +15,9 @@ module Vh
   #
   # @return [Vh]
   def self.add(path, hostname)
+    # Check and install if necessary the configuration on the web server
+    self.install
+
     # Add the host to the Apache configuration
     apache_config = ApacheConfig.new path, hostname
     apache_config.run
@@ -25,6 +29,19 @@ module Vh
     # Restart Apache
     apache_handler = ApacheHandler.new
     apache_handler.run
+
+    return self
+  end
+
+  # Installs - if necessary - the initial configuration needed
+  # for the Virtual Hosts to be properly included in the Apache
+  # configuration.
+  #
+  # @return [Vh]
+  def self.install
+    # Install the Apache configuration include
+    apache_installer = ApacheInstaller.new
+    apache_installer.run
 
     return self
   end

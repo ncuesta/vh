@@ -30,7 +30,7 @@ module Vh
 
       # Check if the configuration file is writable
       unless check_writable?
-        puts "The Apache configuration file is not writable by the current user."
+        puts "The Apache configuration file (#{@config_path}) is not writable by the current user."
         return false
       end
 
